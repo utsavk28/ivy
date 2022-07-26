@@ -1020,7 +1020,7 @@
 <span class="sd">            a container containing the inverse tangent of the quotient ``self/x2``.</span>
 <span class="sd">            The returned array must have a real-valued floating-point data</span>
 <span class="sd">            type determined by :ref:`type-promotion`.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; x = ivy.Container(a=ivy.array([0., 2.6, -3.5]),\</span>
@@ -2522,7 +2522,7 @@
 <span class="sd">            a container containing the evaluated result for each element in ``self``.</span>
 <span class="sd">            The returned array must have a real-valued floating-point data type</span>
 <span class="sd">            determined by :ref:`type-promotion`.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; x = ivy.Container(a=ivy.array([2.5, 0.5]),\</span>
@@ -2634,7 +2634,7 @@
 <span class="sd">        ret</span>
 <span class="sd">            a container containing the rounded result for each element in ``self``.</span>
 <span class="sd">            The returned array must have the same data type as ``self``.</span>
-<span class="sd">         </span>
+
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; x = ivy.Container(a=ivy.array([2.5, 0.5, -1.4]),\</span>
@@ -3796,6 +3796,31 @@
 <span class="sd">        This method simply wraps the function, and so the docstring for</span>
 <span class="sd">        ivy.log10 also applies to this method with minimal changes.</span>
 
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        x</span>
+<span class="sd">            input container. Should have a real-valued floating-point data type.</span>
+<span class="sd">        key_chains</span>
+<span class="sd">            The key-chains to apply or not apply the method to. Default is None.</span>
+<span class="sd">        to_apply</span>
+<span class="sd">            If True, the method will be applied to key_chains, otherwise key_chains</span>
+<span class="sd">            will be skipped. Default is True.</span>
+<span class="sd">        prune_unapplied</span>
+<span class="sd">            Whether to prune key_chains for which the function was not applied.</span>
+<span class="sd">            Default is False.</span>
+<span class="sd">        map_sequences</span>
+<span class="sd">            Whether to also map method to sequences (lists, tuples). Default is False.</span>
+<span class="sd">        out</span>
+<span class="sd">            optional output container, for writing the result to. It must have a shape</span>
+<span class="sd">            that the inputs broadcast to.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ret</span>
+<span class="sd">            a container containing the evaluated base ``10`` logarithm for each</span>
+<span class="sd">            element in ``x``. The returned array must have a real-valued</span>
+<span class="sd">            floating-point data type determined by :ref:`type-promotion`.</span>
+
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        Using :code:`ivy.Container` input:</span>
@@ -3835,6 +3860,31 @@
 <span class="sd">        ivy.Container instance method variant of ivy.log10.</span>
 <span class="sd">        This method simply wraps the function, and so the docstring for</span>
 <span class="sd">        ivy.log10 also applies to this method with minimal changes.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        self</span>
+<span class="sd">            input container. Should have a real-valued floating-point data type.</span>
+<span class="sd">        key_chains</span>
+<span class="sd">            The key-chains to apply or not apply the method to. Default is None.</span>
+<span class="sd">        to_apply</span>
+<span class="sd">            If True, the method will be applied to key_chains, otherwise key_chains</span>
+<span class="sd">            will be skipped. Default is True.</span>
+<span class="sd">        prune_unapplied</span>
+<span class="sd">            Whether to prune key_chains for which the function was not applied.</span>
+<span class="sd">            Default is False.</span>
+<span class="sd">        map_sequences</span>
+<span class="sd">            Whether to also map method to sequences (lists, tuples). Default is False.</span>
+<span class="sd">        out</span>
+<span class="sd">            optional output container, for writing the result to. It must have a shape</span>
+<span class="sd">            that the inputs broadcast to.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ret</span>
+<span class="sd">            a container containing the evaluated base ``10`` logarithm for</span>
+<span class="sd">            each element in ``self``. The returned array must have a real-valued</span>
+<span class="sd">            floating-point data type determined by :ref:`type-promotion`.</span>
 
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
